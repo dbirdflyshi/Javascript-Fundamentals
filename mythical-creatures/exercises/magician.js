@@ -1,44 +1,28 @@
 class Magician {
-    constructor(objects = { name: name }) => {
+    constructor( objects ){
         this.name = 'The Great ' + objects.name;
-        this.assistant = objects.assistant;
-        this.favoriteAccessory = objects.clothing;
+        this.assistant = objects.assistant || false;
+        this.favoriteAccessory = objects.clothing || 'top hat';
+        this.confidencePercentage = 10;
     }
-    
-}
-
-var magician = new Magician({ name: 'Scott' });
-console.log(magician.favoriteAccessory);
-
-
-module.exports = Magician 
-
-class Magician {
-    constructor(objects = { name: 'Albert',
-                            hasAssistant: true,
-                            clothing: 'top hat' }) {
-        this.name = objects.magicianName;
-        this.assistant = objects.hasAssistant;
-        this.favoriteAccessory = objects.clothing;
+    performIncantation(chant){
+        return chant.toUpperCase()+'!';
+    }
+    performTrick(){
+        if(this.favoriteAccessory === 'top hat'){
+            this.confidencePercentage += 10;
+            return 'PULL RABBIT FROM TOP HAT';
+        } else{
+            this.confidencePercentage += 10;
+            return 'PULL DOVE FROM SLEEVE';
+        }
+    }
+    performShowStopper(){
+        if ((this.confidencePercentage >= 100) && (this.assistant === true)){
+            return 'WOW! The magician totally just sawed that person in half!'
+        } else{
+            return 'Oh no, this trick is not ready!'
+        }
     }
 }
-
-var magician = new Magician({name : 'Scott' });
-console.log(magician.favoriteAccessory); // => undefined
-
-
-
-
-
-
-
-class x {
-    constructor(output = { key: 'value1',
-                           keya : 'value2' }){
-        this.key2 = output.key
-        this.key3 = output.keya
-}
-}
-
-var x2 = new x({key : 'newValue'});
-console.log(x2.key3);                  // outputs - {key1: 'value1'}
+module.exports = Magician ;
