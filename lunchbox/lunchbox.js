@@ -1,7 +1,7 @@
 class LunchBox {
-    constructor(owner, madeOf, shape, color){
-        this.owner = owner.owner;
-        this.madeOf = madeOf.madeOf;
+    constructor(lunchBoxObject){
+        this.owner = lunchBoxObject.owner;
+        this.madeOf = lunchBoxObject.madeOf;
         //this.shape = shapeType.shape;
         //this.color = colorName.color;
     }
