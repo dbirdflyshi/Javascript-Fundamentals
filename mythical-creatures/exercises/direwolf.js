@@ -11,7 +11,7 @@ class Direwolf{
             this.starksToProtect = [...this.starksToProtect, stark];
             stark.safe = true;
             this.huntsWhiteWalkers = false;
-        }
+        } 
     }
     leave(stark){
         this.starksToProtect.splice(this.starksToProtect.indexOf(stark),1);

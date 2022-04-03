@@ -15,7 +15,10 @@ class Stark{
         }
     }
     callDirewolf(name,location){
-        
+        const direwolf = new Direwolf(name = name, location = location);
+        direwolf.protect(this);
+        return direwolf;
     }
 }
+
 module.exports = Stark;

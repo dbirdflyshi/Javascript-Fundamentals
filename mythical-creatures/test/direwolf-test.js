@@ -180,9 +180,9 @@ describe('Direwolf', function() {
   });
 
   it('should be able to call their direwolf to become protected', function() {
-    const stark = new Stark({name: 'Arya', area: 'Riverlands'})
 
-    var direwolf = stark.callDirewolf('Nymeria', 'Winterfell')
+    const stark = new Stark({name: 'Arya', area: 'Riverlands'})
+    var direwolf = stark.callDirewolf('Nymeria', 'Riverlands')
 
     assert.instanceOf(direwolf, Direwolf)
     assert.equal(direwolf.name, 'Nymeria')
