@@ -19,7 +19,6 @@ class Cabinet{
         return firstPotion;
     }
     takePotionWithName(potion){
-        // var namedPotion = this.potions.splice(this.potions.indexOf(potion), 1);
         // getting the index of the potion
         var index = this.potions.findIndex(obj => obj.name === potion);
         // removing the item with the index found above
